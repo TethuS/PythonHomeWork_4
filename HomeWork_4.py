@@ -4,6 +4,7 @@ from functools import reduce
 names_list = ['Вованчик', 'Светусик', 'Борюсик', 'Вероничка', 'Алиска', 'Сашенька', 'Антошка',
               'Ленусик', 'Викуся', 'Витенька', 'Владочка', 'Коленька', 'Егорка', 'Владюша',
               'Катенька', 'Андрюша', 'Алинка', 'Борюсик', 'Елизаветка', 'Анютка']
+N = 100
 
 '''
 Задание 1
@@ -29,7 +30,7 @@ def Get_most_repeating(random_names_list): # Решение взято из ДЗ
     names_count.sort(key=lambda x: x[1], reverse=True) # Сортируем список по кол-ву повторений
     print(names_count[0]) # Выводим самый повторяющийся элемент
 
-Get_most_repeating(Get_random_names(names_list, 100))
+Get_most_repeating(Get_random_names(names_list, N))
 
 '''
 Задание 3
@@ -41,4 +42,4 @@ def Get_legendary_letter (random_names_list):
     legendary_letter = reduce(lambda x, y: x if first_letter.count(x) < first_letter.count(y) else y, first_letter)
     print(legendary_letter)
 
-Get_legendary_letter(Get_random_names(names_list, 100))
+Get_legendary_letter(Get_random_names(names_list, N))
